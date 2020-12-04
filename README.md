@@ -11,7 +11,7 @@ The 74LS38 chip was used to adapt the *MOTOR ON/READY* signal to the FDD bus sta
 The interface is located on a double-sided board (38 vias) of 6x5 cm, with surface-mount components on the upper layer only. The board can be used with either straight or angled DB23 connectors (after straightening the legs). As a small curiosity, I would like to add that I made the prototype board without etching (with a mini drill and a small cutter).
 
 Depending on the type of the connected floppy disk drive, the interface jumpers should be set appropriately (they must not be changed while the interface is powered on):
-- J1 responsible for the *READY* signal. If you connect a non-converted drive to a PC, set this jumper in position 1-2 (the *READ*Y signal will be generated based on *SELx* and *INDEX* signals). Setting the jumper in position 2-3 will cause that the *READY *signal will be read directly from pin 34 of the floppy disk drive (Amiga or a converted PC one). **NOTE: Due to a construction error, this jumper must always be set to the 1-2 position.**
+- J1 responsible for the *READY* signal. If you connect a non-converted drive to a PC, set this jumper in position 1-2 (the *READY* signal will be generated based on *SELx* and *INDEX* signals). Setting the jumper in position 2-3 will cause that the *READY* signal will be read directly from pin 34 of the floppy disk drive (Amiga or a converted PC one). **NOTE: Due to a construction error, this jumper must always be set to the 1-2 position.**
 
 - J2 responsible for the *DISK CHANGE* signal. If you connect a non-converted drive from the PC, set the jumper in position 1-2 (the *DISK CHANGE* signal will be read directly from pin 34 of the drive). Setting the jumper in position 2-3 will cause the *DISK CHANGE* signal to be read directly from pin 2 of the floppy disk drive (Amiga or a converted PC one).
 
@@ -32,7 +32,7 @@ I don't have any FDD emulators for testing, but they should all work with the in
 
 NOTE: If the interface is plugged into the *DISK DRIVE* connector and no drive is connected to it, it will be detected by the Amiga anyway (it will have the number set with the J4 jumper). This drive will be visible in the Boot Menu and its icon `DFx: ????` will appear on the Workbench counter.
 
-## BILL OF MATERIALS
+## Bill Of Materials
 - Resistors:
   - R1-R3 - 2.2k
 - Capacitors:
