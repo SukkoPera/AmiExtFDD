@@ -1,6 +1,9 @@
-# AmiExtFdd - Amiga External Floppy Disk Drive Interface
+# AmiExtFDD
 
-Copyright &copy; 2015 by [RomanWorkshop](http://romanworkshop.blutu.pl)
+AmiExtFDD is an External Floppy Disk Drive Interface for Amiga computers. It is extremely versatile and flexible, allowing connection of PC drives, Amiga drives and various floppy drive emulators.to any Amiga computer.
+
+## Summary
+*(The following is an English translation of the original author's notes, by Google Translate and manual intervention from SukkoPera)*
 
 I made my own version of the interface to connect an external floppy drive (or FDD emulator) to the *DISK DRIVE* connector. First, the drive must be connected to the interface with a straight cable (without any twists). You can connect the original, internal DD (Double Density) drive from the Amiga or HD (High Density) drives from the PC (converted or not). Regardless of the type of connected drive, it will be seen by the Amiga as a DD drive (880 kB). If you connect a PC HD drive and use HD floppy disks (i.e.: "with two holes"), the second hole should be sealed, otherwise you will experience read/write errors. The advantage is that the PC drive can be used without changing its number from DS1 to DS0 (you would need a soldering iron in order to do this on most drives).
 
@@ -9,6 +12,9 @@ The interface is powered from the disk drive connector (pin 12) and consumes a c
 The 74LS38 chip was used to adapt the *MOTOR ON/READY* signal to the FDD bus standard, which uses open collector (OC) outputs. However my tests show that it can be done with a regular 74LS00.
 
 The interface is located on a double-sided board (38 vias) of 6x5 cm, with surface-mount components on the upper layer only. The board can be used with either straight or angled DB23 connectors (after straightening the legs). As a small curiosity, I would like to add that I made the prototype board without etching (with a mini drill and a small cutter).
+
+## Configuration
+*(Still from the original author's notes)*
 
 Depending on the type of the connected floppy disk drive, the interface jumpers should be set appropriately (they must not be changed while the interface is powered on):
 - J1 responsible for the *READY* signal. If you connect a non-converted drive to a PC, set this jumper in position 1-2 (the *READY* signal will be generated based on *SELx* and *INDEX* signals). Setting the jumper in position 2-3 will cause that the *READY* signal will be read directly from pin 34 of the floppy disk drive (Amiga or a converted PC one). **NOTE: Due to a construction error, this jumper must always be set to the 1-2 position.**
@@ -32,6 +38,24 @@ I don't have any FDD emulators for testing, but they should all work with the in
 
 NOTE: If the interface is plugged into the *DISK DRIVE* connector and no drive is connected to it, it will be detected by the Amiga anyway (it will have the number set with the J4 jumper). This drive will be visible in the Boot Menu and its icon `DFx: ????` will appear on the Workbench counter.
 
+## History
+I'm not sure of how this board came into existance, but I think the original version was developed by Roman „RomanWorkshop“ Breński. It is available [on GitHub](https://github.com/Sakura-IT/AmiExtFDD).
+
+Those board design files, though, do NOT match the Gerbers that are available in the accompanying `Gerber_AmiExtFDD.zip` file. The latter is a more advanced design and I think it is what Sakura used to produce the board that went into their [Sakura External Floppy Drives](https://retroami.com.pl/index.php?id_product=153&controller=product&id_lang=1&search_query=sakura&results=1) that were sold at RetroAmi. The manual for that interface additionally credits the work to Jarosław „jarob“ Bieliński and Radosław „strim“ Kujawaauthor.
+
+The board design files appear to be for version 1.01, and the Eagle board file is not routed and components haven't even been placed properly.
+
+I later [found some updated files for version 1.02](http://romanworkshop.blutu.pl/elec/amiextfdd.htm), so I thought I would fork the original repo to merge it with the update and try to reconstruct the history of this nice piece of hardware. I'm not sure what is changed in this version, but at least the components have been placed on the board, even though they do not seem to match the final design the author is talking about in one of the accompanying PDF documents.
+
+So here we go: the schematics, board design and gerbers we have are all for different revisions of the board.
+
+To be clear: all I (SukkoPera) did was collect original design files and inspect them. I had no part in the design of this board.
+
+## License
+AmiExtFDD is Copyright &copy; 2014-2015 by [RomanWorkshop](http://romanworkshop.blutu.pl).
+
+All schematics and board layout files are licensed under the [Creative Commons Attribution-ShareAlike 4.0 license](https://creativecommons.org/licenses/by-sa/4.0/).
+
 ## Bill Of Materials
 - Resistors:
   - R1-R3 - 2.2k
@@ -47,5 +71,3 @@ NOTE: If the interface is plugged into the *DISK DRIVE* connector and no drive i
   - J1-J3 - 3x1 jumper
   - J4 - 3x2 jumper
   - U1, U2 - DIP14 standard socket
-
-*(English translation by Google Translate and manual intervention from SukkoPera - Dec 2020)*
