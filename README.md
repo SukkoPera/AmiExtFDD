@@ -25,6 +25,9 @@ Depending on the type of the connected floppy disk drive, the interface jumpers 
 
 - J4 is used to select the floppy disk drive number under which it will be visible in the Boot Menu and in the AmigaDOS/Workbench operating system. This number depends on the jumper position: 1-2 = DF1, 3-4 = DF2, 5-6 = DF3. On the Amiga CDTV this is different: 1-2 = DF0, 3-4 = DF1, 5-6 = DF2.
 
+## Compatibility
+*(Still from the original author's notes - **I (SukkoPera) haven't tested this board yet**.)*
+
 I tested on Amiga 500 (KS 2.05) and Amiga 600 (KS 3.1) interface interoperability (all jumpers in position 1-2) with five unmodified PC drives, which I powered from the *DISK DRIVE* connector:
 - TEAC FD-235HF (6291)
 - NEC FD1231H
