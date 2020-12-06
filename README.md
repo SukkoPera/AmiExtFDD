@@ -44,9 +44,9 @@ NOTE: If the interface is plugged into the *DISK DRIVE* connector and no drive i
 ## History
 I'm not sure of how this board came into existance, but I think the original version was developed by Roman „RomanWorkshop“ Breński. It is available [on GitHub](https://github.com/Sakura-IT/AmiExtFDD).
 
-Those board design files, though, do NOT match the Gerbers that are available in the accompanying `Gerber_AmiExtFDD.zip` file. The latter is a more advanced design and I think it is what Sakura used to produce the board that went into their [Sakura External Floppy Drives](https://retroami.com.pl/index.php?id_product=153&controller=product&id_lang=1&search_query=sakura&results=1) that were sold at RetroAmi. The manual for that interface additionally credits the work to Jarosław „jarob“ Bieliński and Radosław „strim“ Kujawaauthor.
+Those board design files, though, do NOT match the Gerbers that are available in the accompanying `Gerber_AmiExtFDD.zip` file. The latter is a more advanced design and I think it is what Sakura used to produce the board that went into their [External Floppy Drives](https://retroami.com.pl/index.php?id_product=153&controller=product&id_lang=1&search_query=sakura&results=1) that were sold at RetroAmi. The manual for that interface additionally credits the work to Jarosław „jarob“ Bieliński and Radosław „strim“ Kujawaauthor.
 
-The board design files appear to be for version 1.01, and the Eagle board file is not routed and components haven't even been placed properly.
+The board design is done in Eagle and appears to be for version 1.01. The board file is not routed and components haven't even been placed.
 
 I later [found some updated files for version 1.02](http://romanworkshop.blutu.pl/elec/amiextfdd.htm), so I thought I would fork the original repo to merge it with the update and try to reconstruct the history of this nice piece of hardware. I'm not sure what is changed in this version, but at least the components have been placed on the board, even though they do not seem to match the final design the author is talking about in one of the accompanying PDF documents.
 
